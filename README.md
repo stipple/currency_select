@@ -10,7 +10,7 @@ This plugin is modified from the 'country and region select'  plugin on GitHub. 
 
 To install this plugin in your Rails application, simply:
 
-script/plugin install git://github.com/gavinlaking/currency_select.git
+script/plugin install git://github.com/stipple/currency_select.git
 
 ## Example
 
