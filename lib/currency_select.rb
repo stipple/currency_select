@@ -191,7 +191,7 @@ module ActionView
         ["Vietnamese Dong", "VND"],
         ["Yugoslav Dinar", "YUN"],
         ["Zambian Kwacha", "ZMK"],
-        ["ZWD","Zimbabwe Dollar"]
+        ["Zimbabwe Dollar", "ZWD"]
       ] unless const_defined?("CURRENCIES")
     end
     
