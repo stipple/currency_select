@@ -14,6 +14,6 @@ script/plugin install git://github.com/stipple/currency_select.git
 
 ## Example
 
-<%= currency_select :model, :currency, ["British Pound", "US Dollar"] %>
+<%= currency_select :model, :currency, [["British Pound", "GBP"], ["US Dollar", "USD"]] %>
 
 (In the above example, 'British Pound' and 'US Dollar' are priority currencies, meaning they appear at the top of the list of currencies.)
