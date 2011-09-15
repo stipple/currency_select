@@ -16,7 +16,7 @@ module ActionView
       # NOTE: Only the option tags are returned, you have to wrap this call
       # in a regular HTML select tag.
       
-      def currency_options_for_select(selected = nil, priority_currencies = nil)
+      def currency_options_for_select(selected = nil, priority_currencies = nil, options = {})
         currency_options = ""
 
         if priority_currencies
@@ -24,7 +24,7 @@ module ActionView
           currency_options += "<option value=\"\" disabled=\"disabled\">------</option>\n"
         end
 
-        return currency_options + options_for_select(CURRENCIES, selected)
+        return currency_options + options_for_select(options[:currencies] || CURRENCIES, selected)
       end
       # All the currencies included in the currency_options output.
       CURRENCIES = [
@@ -191,7 +191,7 @@ module ActionView
         ["Vietnamese Dong", "VND"],
         ["Yugoslav Dinar", "YUN"],
         ["Zambian Kwacha", "ZMK"],
-        ["Zimbabwe Dollar", "ZWD"]
+        ["ZWD","Zimbabwe Dollar"]
       ] unless const_defined?("CURRENCIES")
     end
     
@@ -202,7 +202,7 @@ module ActionView
         value = value(object)
         content_tag("select",
           add_options(
-            currency_options_for_select(value, priority_currencies),
+            currency_options_for_select(value, priority_currencies, options),
             options, value
           ), html_options
         )
