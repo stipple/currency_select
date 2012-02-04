@@ -4,15 +4,13 @@ Provides a simple helper to get an HTML select list of currencies.
 
 The value of the selected item is the [ISO 4217](http://en.wikipedia.org/wiki/ISO_4217) currency code for the selected currency.
 
-This plugin is modified from the ['country and region select' plugin](http://github.com/ihower/country_and_region_select/tree/master) on GitHub.
+This gem is modified from the ['country and region select' plugin](http://github.com/ihower/country_and_region_select/tree/master) on GitHub.
 
 ## Installation
 
-To install this plugin in your Rails application, simply:
+To install this gem in your Rails application, simply add it to your Gemfile:
 
-Rails 3: `script/rails plugin install git://github.com/stipple/currency_select.git`
-
-Rails 2: `script/plugin install git://github.com/stipple/currency_select.git`
+`gem 'currency_select'`
 
 ## Example
 
